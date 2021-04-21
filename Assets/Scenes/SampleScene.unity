@@ -433,6 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 473503749}
   - component: {fileID: 473503748}
+  - component: {fileID: 473503747}
   m_Layer: 0
   m_Name: StepEmitter
   m_TagString: Untagged
@@ -440,6 +441,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &473503747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473503746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5db0342dd2bb2d49975a1f8882057cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &473503748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,9 +942,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1672590926}
-        m_TargetAssemblyTypeName: EnginePlayer, Assembly-CSharp
-        m_MethodName: SetLoad
+      - m_Target: {fileID: 473503747}
+        m_TargetAssemblyTypeName: StepPlayer, Assembly-CSharp
+        m_MethodName: SetSurface
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1024,8 +1037,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 473503748}
-        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+      - m_Target: {fileID: 473503747}
+        m_TargetAssemblyTypeName: StepPlayer, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -1846,8 +1859,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: 
   Event: event:/Vehicles/Car Engine
-  PlayEvent: 0
-  StopEvent: 0
+  PlayEvent: 11
+  StopEvent: 12
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -2048,7 +2061,7 @@ GameObject:
   - component: {fileID: 1924445773}
   - component: {fileID: 1924445772}
   m_Layer: 5
-  m_Name: Play
+  m_Name: GoToLink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
